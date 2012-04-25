@@ -7,4 +7,4 @@ test:
   database: fuz_test
 
 production:
-  uri: <%= ENV['MONGOURL'] %>
+  uri: <%= ENV['MONGOLAB_URI'] %>
