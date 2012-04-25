@@ -8,7 +8,7 @@ require 'sinatra/reloader'
 require "mongoid"
 require "haml"
 
-require "ruby-debug"
+# require "ruby-debug"
 
 
 class Fuz < Sinatra::Base
