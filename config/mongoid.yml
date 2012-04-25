@@ -1,0 +1,10 @@
+development:
+  host: localhost
+  database: fuz_dev
+
+test:
+  host: localhost
+  database: fuz_test
+
+production:
+  uri: <%= ENV['MONGOURL'] %>
