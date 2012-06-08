@@ -1,3 +1,13 @@
-%h1 fuz
+#pims_index
+	.pims
+		- @pims.each do |pim|
+			.pim{class: ["#{pim.provider}_#{pim.pim_type}" ]}
+				.pim-wrap
+					= haml(:"tiles/#{pim.provider}/#{pim.pim_type}", locals: {pim: pim})
+					.ago="#{relative_time_ago(pim.created_at).capitalize} ago."
 
-%p This is just test
+#pims_paginate
+	- if not(@pims.page.first_page?)
+		%a.back{href:"/#{@pims.page.current_page-1}"} Back
+	- if not(@pims.page.last_page?)
+		%a.next{href:"/#{@pims.page.current_page+1}"} Next

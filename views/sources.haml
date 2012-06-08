@@ -1,0 +1,11 @@
+%h1 Sources
+
+%a{href:"/auth/facebook"} Auth w/ Facebook
+%br/
+%a{href:"/auth/twitter"} Auth w/ Twitter
+%br/
+
+%ul
+	- @sources.each do |source|
+		%li
+			%a{href:"/feed/#{source.provider}/#{source.uid}"}= source

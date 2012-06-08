@@ -14,6 +14,8 @@ describe Fuz do
 		last_response.should be_ok
 	end
 
+=begin
+
 	it "has '/fuz.css' " do
 		get '/fuz.css'
 		puts last_response.body
@@ -27,6 +29,11 @@ describe Fuz do
 
 	it "has '/10-longboarding/10-mypost" do
 		get '/10-longboarding/10-mypost'
+		last_response.should be_ok
+	end
+=end
+	it "should respond to '/dejan'" do
+		get '/dejan'
 		last_response.should be_ok
 	end
 

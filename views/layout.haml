@@ -1,7 +1,24 @@
 !!!
 %html
 	%head
-		%title fuz
+		%title Oto Brglez. This is my life.
+
+		%script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
+		%script(src="/javascripts/jquery.infinitescroll.min.js")
+		%script(src="/javascripts/app.js")
+
+		%link(href="/fuz.css" media="screen" rel="stylesheet" type="text/css")
 
 %body
-	=yield
+	.header
+		.header-wrap
+			%a.name(href="/") Oto Brglez
+			.state
+				I'm hacker at
+				%a(href="http://opalab.com") OPALAB d.o.o.
+				%br/
+				This is my life feed.
+	.main-wrap
+
+		.content
+			=yield

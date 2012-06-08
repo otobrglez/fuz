@@ -8,6 +8,21 @@ gem 'bson_ext'
 gem 'haml'
 gem 'sass'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+# gem 'omniauth-github'
+
+gem 'feedzirra'
+gem 'httparty'
+gem 'twitter'
+
+gem 'clockwork'
+gem 'rinku'
+
+gem 'kaminari', :require => 'kaminari/sinatra'
+gem 'padrino-helpers'
+
 group :test, :development do
 	gem 'foreman'
 	gem 'shotgun'

@@ -1,6 +1,111 @@
 /* main.scss */
 
 body,td,th,p{
-	font-family:Helvetica, sans-serif;
-	font-size:14px;
+	font-family:Georgia, Times, sans-serif;
+}
+
+body{
+	margin:0px;
+	padding:0px;
+	text-align:center;
+}
+
+body .main-wrap{
+	max-width:800px;
+	margin:0 auto;
+	text-align:left;
+
+	padding-left:5px;
+	padding-right:5px;
+}
+
+a{
+	color:#BB5C2D
+}
+
+
+	
+body .header{
+		background:#F7F7F7 url('/images/header_underline.gif');
+		background-position:bottom center;
+		background-repeat:repeat-x;
+
+		.header-wrap{
+			height:150px;
+			background:url('/images/arr_top.gif') center bottom no-repeat;
+
+			a.name{
+				display:block;
+				padding-top:35px;
+				font-size:200%;
+				text-decoration:none;
+			}
+
+			.state a{
+				color:#333;
+			}
+		}
+}
+
+
+p{
+	margin:0px;
+	padding:0px;
+}
+
+#pims_index{
+	.pims{
+		display:block;
+		width:100%;
+		margin-top:20px;
+		
+		.pim{
+			border-bottom:1px solid #CCC;
+			position:relative;
+			padding:4px;
+			padding-left:30px;
+
+			p.message{
+				margin-bottom:4px;
+				margin-top:4px;
+				font-size:120%;
+			}
+
+			.icon{
+				position:absolute;
+				top:5px;
+				left:0px;
+			}
+			.pim-wrap{
+				.ago{color:#999}
+			}
+		}
+
+	}
+}
+
+#pims_paginate{
+	padding:5px;
+	text-align:center;
+}
+
+@media all and (max-width: 520px){
+	body .header .header-wrap{
+		height:auto;
+		background:none;
+		a.name{
+			padding:0px;
+			padding:3px;
+		}
+		.state{
+			display:none;
+		}
+	}
+
+	#pims_index .pims .pim{
+		.ago{ display:none; }
+		p.message{
+			font-size:90%;
+		}
+	}
 }
