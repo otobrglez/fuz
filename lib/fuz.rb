@@ -19,7 +19,7 @@ require "./lib/models/pim.rb"
 require "./lib/models/source.rb"
 
 
-require "ruby-debug"
+# require "ruby-debug"
 
 class Fuz < Sinatra::Base
 
