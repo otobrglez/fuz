@@ -14,19 +14,12 @@ require "./lib/twitter_provider.rb"
 require "./lib/rss_provider.rb"
 require "./lib/youtube_provider.rb"
 require "./lib/github_provider.rb"
-
 require "./lib/models/pim.rb"
 require "./lib/models/source.rb"
-
 
 # require "ruby-debug"
 
 class Fuz < Sinatra::Base
-
-	#configure :development do
-	#	register Sinatra::Reloader
-	#	also_reload "#{Dir.pwd}/lib/models/*"
-	#end
 
 	configure [:development, :test] do Mongoid.logger = Logger.new($stdout); end
 	configure :production do Mongoid.logger=Logger.new('/dev/null'); end
@@ -58,19 +51,17 @@ class Fuz < Sinatra::Base
 	  redirect "/"  
   	end
 
-
-	#=begin  
+=begin  
 	get '/sources' do
 		@sources = Source.all
 		haml :sources
 	end
-	#=end
 
 	get '/feed/:provider/:uid' do
 		@items = Source.where(provider:params[:provider],uid:params[:uid]).first.feed
 		@items.to_json
 	end
-
+=end
 
 	get '/:page' do
 		@pims = Pim.all.page(params[:page].to_i)
