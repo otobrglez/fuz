@@ -65,6 +65,12 @@ class Fuz < Sinatra::Base
 	end
 =end
 
+	get "/locations.js" do
+		response["Content-Type"] = "text/javascript"
+		@locations = Pim.with_location.map(&:location)
+		erb :locations
+	end
+
 	get '/:page' do
 		@pims = Pim.all.page(params[:page].to_i)
 		haml :index

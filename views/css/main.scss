@@ -89,7 +89,19 @@ p{
 	text-align:center;
 }
 
+#pims_map{
+	display:block;
+	width:100%;
+	height:300px;
+	margin-top:5px;
+}
+
 @media all and (max-width: 520px){
+	
+	#pims_map{
+		display:none;
+	}
+	
 	body .header .header-wrap{
 		height:auto;
 		background:none;
