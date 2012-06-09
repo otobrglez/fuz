@@ -6,7 +6,7 @@ var map, markers = null;
 var build_gmap = function(){
 	var start_loc = new google.maps.LatLng(center_location[0],center_location[1]);
 	var mapOptions = {
-      zoom: 8,
+      zoom: 7,
       center: start_loc,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: true,

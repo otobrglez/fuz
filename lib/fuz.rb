@@ -4,7 +4,6 @@ require "bundler"
 Bundler.require
 
 require 'sinatra/base'
-# require 'sinatra/reloader'
 require "mongoid"
 require "haml"
 require 'rinku'
