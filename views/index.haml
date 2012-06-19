@@ -2,7 +2,7 @@
 #pims_index
 	.pims
 		- @pims.each do |pim|
-			.pim{class: ["#{pim.provider}_#{pim.pim_type}" ], "data-id": pim.id}
+			.pim{:class => ["#{pim.provider}_#{pim.pim_type}" ], :"data-id" => pim.id}
 				.pim-wrap
 					= haml(:"tiles/#{pim.provider}/#{pim.pim_type}", locals: {pim: pim})
 					.ago="#{relative_time_ago(pim.created_at).capitalize} ago."
