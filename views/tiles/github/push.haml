@@ -2,4 +2,4 @@
 	%img{src:"/images/github.png"}
 
 %p.message
-	=pim.message.gsub(/\w+\/\w+/,"<a href=\"#{pim.link}\">#{$1}</a>")
+	=pim.message.gsub(/(?<rep>\w+\/\w+)/,'<a href="'+pim.link+'">\k<rep></a>')
