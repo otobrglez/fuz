@@ -2,4 +2,4 @@
 	%img{src:"/images/github.png"}
 
 %p.message
-	=pim.message.gsub(/(\w+\/\w+)/,"<a href=\"#{pim.link}\">#{Regexp.last_match.to_s}</a>")
+	=pim.message.gsub(/\w+\/\w+/,"<a href=\"#{pim.link}\">#{$1}</a>")
